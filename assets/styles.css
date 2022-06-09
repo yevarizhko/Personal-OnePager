@@ -140,7 +140,7 @@ body {
     width: 40%;
     height: 100%;
 
-    background-image: url(img/portrait.png);
+    background-image: url(img/portrait.jpg);
     background-position: 65% top;
     background-size: cover;
     /* Inside auto layout */
@@ -215,13 +215,19 @@ body {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 0px;
-    gap: 40px;
+    gap: 20px;
 }
 
 .buttons button {
+    /* Auto layout */
 
-    width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 14px 36px;
+    gap: 10px;
+
+    min-width: 180px;
     height: 60px;
 
     /* Black */
@@ -237,9 +243,6 @@ body {
     line-height: 200%;
     /* identical to box height, or 32px */
 
-    display: inline-block;
-    align-items: center;
-    text-align: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;
 
@@ -278,18 +281,22 @@ body {
 
 }
 
-.contact i {
-    font-size: 48px;
-    color: black;
-}
+.contact .mail {
+    /* Auto layout */
 
-.contact a {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0px;
     gap: 16px;
-    
+}
+
+
+.contact i {
+    font-size: 48px;
+}
+
+.contact a {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
@@ -301,7 +308,9 @@ body {
     color: black;
 }
 
-.contact a:hover, i:hover{
+
+
+.contact a:hover {
     color: #333;
 }
 
