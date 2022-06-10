@@ -1,7 +1,17 @@
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
+
+
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    width: 100%;
+    background-color: #fafafa;
 }
 
 .container {
@@ -10,50 +20,39 @@ body {
 
 .black-stripe {
     background-color: black;
-    height: 50vh;
+    height: 224px;
     position: absolute;
     top: 0;
     left: 0;
-    margin-left: auto; 
-    margin-right: auto; 
     width: 100%;
 }
 
 .column {
     position: absolute;
-    width: 100vw;
+    width: 100%;
 }
-
-
 
 .content {
     display: block;
     margin: auto;
-    max-width: 1600px;
-    height: calc(100vh - 48px);
     /* Auto layout */
 
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    padding: 24px 0px 0px;
-    gap: 24px;
+    padding: 0px 12px;
+    gap: 8px;
 }
 
-@media screen and (max-width: 1648px) {
-    .column {
-        padding: 0px 24px 0 24px;
-        width: calc(100% - 48px);
-    }
-}
+
 
 .navbar {
-    width: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 80px;
+    padding: 0px 16px;
+    height: 60px;
 
     /* Inside auto layout */
 
@@ -67,39 +66,42 @@ body {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
-    line-height: 33px;
-    white-space: nowrap;
-    /* identical to box height */
-
+    font-size: 20px;
+    line-height: 27px;
     display: flex;
     align-items: center;
     letter-spacing: 0.22em;
     text-transform: uppercase;
+    white-space: nowrap;
 
     color: white;
 }
 
+.langs .desktop {
+    display: none;
+}
+
 .langs {
+    /* Auto layout */
+
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
     padding: 0px;
-    gap: 40px;
+    gap: 16px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
 }
 
 .langs a {
     color: white;
     text-decoration: none;
-}
-
-.langs .lang {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px;
-    gap: 4px;
 
     font-family: 'Open Sans';
     font-style: normal;
@@ -109,6 +111,14 @@ body {
     letter-spacing: 0.02em;
     text-transform: uppercase;
     color: white;
+}
+
+.langs .lang {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 4px;
 }
 
 .langs .lang .underline {
@@ -122,43 +132,41 @@ body {
 
 .page {
     /* Auto layout */
+
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: column;
     align-items: center;
-    gap: 40px;
-
-    min-width: 0;
-
-    /* White */
-
-    background: #FFFFFF;
-    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.15);
+    padding: 0px;
+    gap: 24px;
 
     /* Inside auto layout */
 
     flex: none;
     order: 1;
     align-self: stretch;
-    flex-grow: 1;
+    flex-grow: 0;
 
 }
 
 .portrait {
     /* portrait */
 
+    height: 315px;
+
     object-fit: cover;
     background-repeat: no-repeat;
 
-    background-image: url(img/portrait.jpg);
+    background-image: url(../img/portrait.jpg);
     background-position: 65% top;
     background-size: cover;
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
+
     /* Inside auto layout */
 
-    flex: 1;
+    flex: none;
     order: 0;
-    flex-grow: 2;
     align-self: stretch;
+    flex-grow: 0;
 }
 
 .info {
@@ -167,108 +175,89 @@ body {
     justify-content: flex-start;
     align-items: stretch;
 
-    min-width: 0;
-
     /* Inside auto layout */
 
-    flex: 1;
+    flex: none;
     order: 1;
     align-self: stretch;
-    flex-grow: 3;
+    flex-grow: 0;
 
 
 }
 
 .info h1 {
-    margin-top: 80px;
+    margin-top: 0;
     margin-bottom: 0;
 
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 40px;
-    line-height: 54px;
+    font-size: 24px;
+    line-height: 28px;
     letter-spacing: 0.03em;
 
-    color: black;
-
-    flex: 1;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
+    color: #000000;
 }
 
 .info h2 {
-    margin-top: 20px;
+    margin-top: 8px;
     margin-bottom: 0;
 
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 16px;
+    line-height: 22px;
     /* identical to box height */
 
     letter-spacing: 0.03em;
 
-    color: black;
-
-    flex: 1;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
+    color: #000000;
 }
 
 .info p {
-    margin-top: 40px;
+    margin-top: 16px;
     margin-bottom: 0;
 
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 200%;
-    /* or 60px */
+    /* or 32px */
 
     letter-spacing: 0.03em;
 
     /* Text Grey */
 
     color: #444444;
-
-
-    flex: 1;
-    order: 2;
-    align-self: stretch;
-    flex-grow: 0;
 }
 
 .buttons {
-    margin-top: 80px;
+    margin-top: 24px;
     /* Auto layout */
 
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    gap: 20px;
-
-    flex: 1;
-    order: 3;
-    align-self: stretch;
-    flex-grow: 0;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0px;
+    gap: 12px;
 }
 
 .buttons button {
     /* Auto layout */
 
+    /* Auto layout */
+
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 14px 36px;
-    gap: 10px;
+    padding: 8px 16px;
+    gap: 6px;
 
-    min-width: 180px;
-    height: 60px;
+    min-width: 120px;
+    height: 48px;
 
     /* Black */
 
@@ -279,8 +268,9 @@ body {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 200%;
+    white-space: nowrap;
     /* identical to box height, or 32px */
 
     letter-spacing: 0.03em;
@@ -316,30 +306,34 @@ body {
 }
 
 .contact {
-    margin-top: 80px;
-    margin-bottom: 48px;
-
-    flex: 1;
-    order: 4;
-    align-self: stretch;
-    flex-grow: 0;
-
-
+    margin: auto;
+    margin-top: 32px;
+    margin-bottom: 24px;
 }
 
 .contact .mail {
-    /* Auto layout */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+
+    letter-spacing: 0.03em;
+
+    color: #000000;
 
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     padding: 0px;
-    gap: 16px;
+    gap: 12px;
 }
 
 
 .contact i {
-    font-size: 48px;
+    font-size: 24px;
+
 }
 
 .contact a {
@@ -363,13 +357,15 @@ body {
 
 
 .footer {
+    margin-bottom: 16px;
     /* Auto layout */
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     justify-content: space-between;
     align-items: center;
-    padding: 0px;
+    padding: 12px 0;
+    gap: 24px;
 
     /* Inside auto layout */
 
@@ -403,11 +399,11 @@ body {
 
 .social {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     padding: 0px;
-    gap: 32px;
+    gap: 24px;
 
     /* Inside auto layout */
 
