@@ -4,37 +4,47 @@ body {
     width: 100%;
 }
 
+.container {
+    position: relative;
+}
+
 .black-stripe {
     background-color: black;
     height: 50vh;
     position: absolute;
     top: 0;
     left: 0;
+    margin-left: auto; 
+    margin-right: auto; 
     width: 100%;
 }
 
 .column {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-
+    width: 100vw;
 }
+
+
 
 .content {
     display: block;
     margin: auto;
-    width: 1600px;
-    height: 100vh;
-
+    max-width: 1600px;
+    height: calc(100vh - 48px);
     /* Auto layout */
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     padding: 24px 0px 0px;
     gap: 24px;
+}
+
+@media screen and (max-width: 1648px) {
+    .column {
+        padding: 0px 24px 0 24px;
+        width: calc(100% - 48px);
+    }
 }
 
 .navbar {
@@ -59,6 +69,7 @@ body {
     font-weight: 700;
     font-size: 24px;
     line-height: 33px;
+    white-space: nowrap;
     /* identical to box height */
 
     display: flex;
@@ -111,12 +122,13 @@ body {
 
 .page {
     /* Auto layout */
-
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
+    justify-content: flex-start;
+    align-items: center;
     gap: 40px;
+
+    min-width: 0;
 
     /* White */
 
@@ -128,7 +140,8 @@ body {
     flex: none;
     order: 1;
     align-self: stretch;
-    flex-grow: 0;
+    flex-grow: 1;
+
 }
 
 .portrait {
@@ -136,67 +149,84 @@ body {
 
     object-fit: cover;
     background-repeat: no-repeat;
-    width: 40%;
-    height: 100%;
 
     background-image: url(img/portrait.jpg);
     background-position: 65% top;
     background-size: cover;
     /* Inside auto layout */
 
-    flex: none;
+    flex: 1;
     order: 0;
-    flex-grow: 0;
+    flex-grow: 2;
+    align-self: stretch;
 }
 
 .info {
-    width: 906.39px;
-    height: 784px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
 
+    min-width: 0;
 
     /* Inside auto layout */
 
-    flex: none;
+    flex: 1;
     order: 1;
     align-self: stretch;
-    flex-grow: 1;
+    flex-grow: 3;
+
+
 }
 
 .info h1 {
     margin-top: 80px;
+    margin-bottom: 0;
 
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 39.8225px;
+    font-size: 40px;
     line-height: 54px;
     letter-spacing: 0.03em;
 
     color: black;
+
+    flex: 1;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
 }
 
 .info h2 {
     margin-top: 20px;
+    margin-bottom: 0;
 
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 29.8669px;
-    line-height: 41px;
+    font-size: 30px;
+    line-height: 40px;
     /* identical to box height */
 
     letter-spacing: 0.03em;
 
     color: black;
+
+    flex: 1;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
 }
 
 .info p {
     margin-top: 40px;
+    margin-bottom: 0;
 
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 29.8669px;
+    font-size: 24px;
     line-height: 200%;
     /* or 60px */
 
@@ -205,6 +235,12 @@ body {
     /* Text Grey */
 
     color: #444444;
+
+
+    flex: 1;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
 }
 
 .buttons {
@@ -215,6 +251,11 @@ body {
     flex-direction: row;
     align-items: flex-start;
     gap: 20px;
+
+    flex: 1;
+    order: 3;
+    align-self: stretch;
+    flex-grow: 0;
 }
 
 .buttons button {
@@ -276,6 +317,12 @@ body {
 
 .contact {
     margin-top: 80px;
+    margin-bottom: 48px;
+
+    flex: 1;
+    order: 4;
+    align-self: stretch;
+    flex-grow: 0;
 
 
 }
@@ -323,11 +370,6 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0px;
-    gap: 699px;
-
-    width: 1600px;
-    height: 32px;
-
 
     /* Inside auto layout */
 
