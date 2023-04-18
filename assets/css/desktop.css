@@ -1,10 +1,3 @@
-@media screen and (max-width: 1648px) {
-    .column {
-        padding: 0px 24px 0 24px;
-        width: calc(100% - 48px);
-    }
-}
-
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -42,20 +35,23 @@ a:link {
 .column {
     position: absolute;
     width: 100%;
+    box-sizing: border-box;
+    padding-left: 72px;
+    padding-right: 72px;
 }
 
 .content {
 
     display: block;
     margin: auto;
-    max-width: 1600px;
+    /* max-width: 1600px; */
     height: calc(100vh - 48px);
     /* Auto layout */
 
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    padding: 24px 0px 0px;
+    padding: 24px 0px 24px 0px;
     gap: 24px;
 }
 
@@ -81,8 +77,7 @@ a:link {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
-    line-height: 33px;
+    font-size: 20px;
     white-space: nowrap;
     /* identical to box height */
 
@@ -122,8 +117,7 @@ a:link {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 14px;
     letter-spacing: 0.02em;
     text-transform: uppercase;
     color: white;
@@ -199,14 +193,13 @@ a:link {
 }
 
 .info h1 {
-    margin-top: 80px;
+    margin-top: 48px;
     margin-bottom: 0;
 
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 40px;
-    line-height: 54px;
+    font-size: 32px;
     letter-spacing: 0.03em;
 
     color: black;
@@ -219,12 +212,12 @@ a:link {
 
 .info h2 {
     margin-top: 20px;
-    margin-bottom: 0;
+    margin-bottom: 20px;
 
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 40px;
     /* identical to box height */
 
@@ -238,15 +231,14 @@ a:link {
     flex-grow: 0;
 }
 
-.info p {
-    margin-top: 40px;
-    margin-bottom: 0;
 
+.info p {
+    margin: 12px 0px 12px 0px;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 200%;
+    font-size: 20px;
+    line-height: 170%;
     /* or 60px */
 
     letter-spacing: 0.03em;
@@ -263,7 +255,7 @@ a:link {
 }
 
 .buttons {
-    margin-top: 80px;
+    margin-top: 48px;
     /* Auto layout */
 
     display: flex;
@@ -282,7 +274,7 @@ a:link {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 14px 36px;
+    padding: 8px 24px;
     gap: 10px;
 
     min-width: 180px;
@@ -291,14 +283,13 @@ a:link {
     /* Black */
 
     background: #111111;
-    border-radius: 30px;
+    border-radius: 0px;
     border: none;
 
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
-    line-height: 200%;
+    font-size: 14px;
     /* identical to box height, or 32px */
 
     letter-spacing: 0.03em;
@@ -334,7 +325,7 @@ a:link {
 }
 
 .contact {
-    margin-top: 80px;
+    margin-top: 48px;
     margin-bottom: 48px;
 
     flex: 1;
@@ -356,14 +347,14 @@ a:link {
 
 
 .contact i {
-    font-size: 48px;
+    font-size: 36px;
 }
 
 .contact a {
     font-family: 'Open Sans';
     font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
+    font-weight: 700;
+    font-size: 20px;
     /* identical to box height */
     text-decoration: none;
     letter-spacing: 0.03em;
@@ -399,8 +390,7 @@ a:link {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 200%;
+    font-size: 14px;
     /* identical to box height, or 32px */
 
     display: flex;
@@ -437,12 +427,9 @@ a:link {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    /* identical to box height */
+    font-size: 14px;
 
     letter-spacing: 0.03em;
-
 
     color: #5F5F5F;
     text-decoration: none;
@@ -453,7 +440,7 @@ a:link {
 }
 
 .social i {
-    font-size: 32px;
+    font-size: 24px;
 }
 
 .social .network {
