@@ -349,11 +349,26 @@ a:link {
 
 }
 
+
+
 .buttons .button-outlined:hover {
     background: white;
     color: grey;
     border: 2px solid grey;
     cursor: pointer;
+}
+
+.buttons .behance{
+    background: white;
+    color: #0067ff;
+    border: 2px solid #0067ff;
+
+}
+
+.buttons .behance:hover{
+    background: white;
+    color: #3b7fef;
+    border: 2px solid #3b7fef;
 
 }
 
