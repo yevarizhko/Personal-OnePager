@@ -163,7 +163,7 @@ a:link {
 .portrait {
     /* portrait */
 
-    height: 315px;
+    height: 400px;
 
     object-fit: cover;
     background-repeat: no-repeat;
@@ -255,6 +255,10 @@ a:link {
     align-items: stretch;
     padding: 0px;
     gap: 12px;
+}
+
+.buttons .behance {
+    display: none;
 }
 
 .buttons button {
