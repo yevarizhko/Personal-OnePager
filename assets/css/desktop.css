@@ -456,6 +456,15 @@ a:link {
     flex-grow: 0;
 }
 
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 1200px) {
+    .social {
+        gap: 16px;
+    }
+}
+
+
+
 .social a {
     font-family: 'Open Sans';
     font-style: normal;
@@ -474,6 +483,13 @@ a:link {
 
 .social i {
     font-size: 24px;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .social a {
+        font-size: 0;
+    }
 }
 
 .social .network {
